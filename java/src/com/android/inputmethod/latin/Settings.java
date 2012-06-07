@@ -455,6 +455,8 @@ public class Settings extends InputMethodSettingsActivity
             textCorrectionGroup.removePreference(dictionaryLink);
         }
 
+        textCorrectionGroup.removePreference(mShowCorrectionSuggestionsPreference);
+
         final boolean showUsabilityModeStudyOption = res.getBoolean(
                 R.bool.config_enable_usability_study_mode_option);
         if (!showUsabilityModeStudyOption || !ENABLE_EXPERIMENTAL_SETTINGS) {

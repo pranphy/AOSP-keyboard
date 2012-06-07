@@ -2311,15 +2311,16 @@ public class LatinIME extends InputMethodServiceCompatWrapper implements Keyboar
     }
 
     private void updateSuggestionVisibility(final SharedPreferences prefs, final Resources res) {
-        final String suggestionVisiblityStr = prefs.getString(
-                Settings.PREF_SHOW_SUGGESTIONS_SETTING,
-                res.getString(R.string.prefs_suggestion_visibility_default_value));
-        for (int visibility : SUGGESTION_VISIBILITY_VALUE_ARRAY) {
-            if (suggestionVisiblityStr.equals(res.getString(visibility))) {
-                mSuggestionVisibility = visibility;
-                break;
-            }
-        }
+//        final String suggestionVisiblityStr = prefs.getString(
+//                Settings.PREF_SHOW_SUGGESTIONS_SETTING,
+//                res.getString(R.string.prefs_suggestion_visibility_default_value));
+//        for (int visibility : SUGGESTION_VISIBILITY_VALUE_ARRAY) {
+//            if (suggestionVisiblityStr.equals(res.getString(visibility))) {
+//                mSuggestionVisibility = visibility;
+//                break;
+//            }
+//        }
+        mSuggestionVisibility = SUGGESTION_VISIBILILTY_HIDE_VALUE;
     }
 
     protected void launchSettings() {
